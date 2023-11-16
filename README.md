@@ -1,4 +1,4 @@
-### Project name: Elysian ToDo
+### Elysian ToDo
 
 ### Project description:
 
