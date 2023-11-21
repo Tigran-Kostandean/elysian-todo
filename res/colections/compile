@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if g++ -o ../../app main.cpp `pkg-config --cflags --libs gtkmm-3.0`; then
+    echo -e "\033[32mCompiled !\033[0m" 
+else
+    echo -e "\033[31mCompilation ERROR !\033[0m" 
+    exit 1
+fi
+
+if [[ -e ../../app ]]; then
+    echo -e "\033[32mApp is runded !\033[0m"
+    ../../app
+else
+    echo -e "\033[31mExecutable not found !\033[0m" 
+    exit 1
+fi
+echo -e "\033[33mEXIT\033[0m"

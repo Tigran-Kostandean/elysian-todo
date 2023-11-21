@@ -1,0 +1,7 @@
+git add .
+git commit -m "Start"
+git checkout main
+git pull origin main
+git checkout Tigran
+git merge main
+git push origin Tigran
