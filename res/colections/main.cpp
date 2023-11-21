@@ -1,12 +1,11 @@
 #include <gtkmm.h>
 
-class HelloWorld : public Gtk::Window {
+class MainWindow : public Gtk::Window {
 public:
-    HelloWorld() {
-        set_title("Hello World");
-        set_default_size(200, 200);
+    MainWindow() {
+        set_title("Elysian ToDo");
+        set_default_size(400, 500);
 
-        // Create a label
         Gtk::Label label("Hello, GTKmm!");
 
         // Add the label to the window
@@ -18,13 +17,10 @@ public:
 };
 
 int main(int argc, char *argv[]) {
-    // Initialize GTKmm
     auto app = Gtk::Application::create(argc, argv, "org.example.helloworld");
 
-    // Create the main window
-    HelloWorld hello;
+    MainWindow main;
 
-    // Run the application
-    return app->run(hello);
+    return app->run(main);
 }
 
